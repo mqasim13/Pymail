@@ -1,3 +1,4 @@
-# Pymail
+# Pymail - Python mailing from Command Line 
 
-Test readme
+This is an attempt to send an email using command line. 
+
