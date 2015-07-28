@@ -12,7 +12,7 @@ recepient = raw_input("Please put person email")
 message = raw_input("Insert message")
 
 try:
-	#session = smtplib.SMTP("smtp.gmail.com:587")
+	session = smtplib.SMTP("smtp.gmail.com:587")v
 	session = smtplib.SMTP("mailgate.sfu.ca:587")
 #session = smtplib.SMTP()
 	print("sucess")
@@ -26,7 +26,7 @@ try:
 	#having issues with this specific command
 	session.login(sender, password)
 	print ("sucess2")
-	session.sendmail(sender, recepient, message)
+	session.sendmail(sender, [recepient], message)
 	print("success3")
 	session.quit
 	print("message sent :)")
