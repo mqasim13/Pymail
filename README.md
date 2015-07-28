@@ -1,4 +1,7 @@
 # Pymail - Python mailing from Command Line 
 
-This is an attempt to send an email using command line. 
+1. Currently only supports gmail
+
+2. The user must visit "https://www.google.com/settings/security/lesssecureapps" first and allow less secure apps for this application to work
+
 
