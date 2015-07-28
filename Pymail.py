@@ -13,11 +13,14 @@ recepient = raw_input("Please put in the targets email: ")
 subject	= raw_input("Please put in email subject: ")
 #Ask user for message 
 message = raw_input("Input the desired message: ")
-
+signConfirm = raw_input("Y to confirm signature, N to omit ")
+if(signConfirm == "y") or (signConfirm == "Y"):
+	signature = raw_input("Please add signature ")
 
 #TODO: create a proper header + subject for the email
 header = "To: " + recepient + "\n" + "From: " + sender + "\n" + "Subject: " + subject + "\n"
-message = header + message + "\n"
+footer = "\n" + signature
+message = header + message + "\n" + footer
 
 try:
 	session = smtplib.SMTP("smtp.gmail.com", 587)
