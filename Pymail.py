@@ -9,10 +9,15 @@ sender = raw_input("Please enter your gmail email address: ")
 password = raw_input("Please enter your email password: ")
 #Ask user where to send email 
 recepient = raw_input("Please put in the targets email: ")
+#Ask user for email subject
+subject	= raw_input("Please put in email subject: ")
 #Ask user for message 
 message = raw_input("Input the desired message: ")
 
+
 #TODO: create a proper header + subject for the email
+header = "To: " + recepient + "\n" + "From: " + sender + "\n" + "Subject: " + subject + "\n"
+message = header + message + "\n"
 
 try:
 	session = smtplib.SMTP("smtp.gmail.com", 587)
