@@ -12,14 +12,14 @@ recepient = raw_input("Please put person email")
 message = raw_input("Insert message")
 
 try:
-	session = smtplib.SMTP("smtp.gmail.com:587")v
+	session = smtplib.SMTP("smtp.gmail.com:587")
 	session = smtplib.SMTP("mailgate.sfu.ca:587")
 #session = smtplib.SMTP()
 	print("sucess")
 #session.connect("smtp.gmail.com", 587)
 	session.ehlo()
 	print("hi1")
-	session.starttls
+	session.starttls()
 	print("hi")
 	session.ehlo()
 	print("work")
