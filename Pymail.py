@@ -6,7 +6,7 @@ import getpass
 # Note: user must visit "https://www.google.com/settings/security/lesssecureapps" first and allow less secure apps for this application to work
 #Ask user for his email and password
 sender = raw_input("Please enter your gmail email address: ")
-password = raw_input("Please enter your email password: ")
+password = getpass.getpass("Please enter your email password: ")
 #Ask user where to send email 
 recepient = raw_input("Please put in the targets email: ")
 #Ask user for email subject
