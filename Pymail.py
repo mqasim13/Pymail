@@ -17,7 +17,7 @@ signConfirm = raw_input("Y to confirm signature, N to omit ")
 if(signConfirm == "y") or (signConfirm == "Y"):
 	signature = raw_input("Please add signature ")
 
-#TODO: create a proper header + subject for the email
+#create a proper header + subject for the email + signature
 header = "To: " + recepient + "\n" + "From: " + sender + "\n" + "Subject: " + subject + "\n"
 footer = "\n" + signature
 message = header + message + "\n" + footer
