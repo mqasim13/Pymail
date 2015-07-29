@@ -4,6 +4,8 @@ import smtplib
 import getpass
 
 # Note: user must visit "https://www.google.com/settings/security/lesssecureapps" first and allow less secure apps for this application to work
+#TODO Add support for hotmail, Yahoo, and others
+#provider = raw_input("Please put in email provider(i.e gmail, hotmail, Yahoo!): ")
 #Ask user for his email and password
 sender = raw_input("Please enter your gmail email address: ")
 password = getpass.getpass("Please enter your email password: ")
@@ -13,7 +15,9 @@ recepient = raw_input("Please put in the targets email: ")
 subject	= raw_input("Please put in email subject: ")
 #Ask user for message 
 message = raw_input("Input the desired message: ")
+#Asking user if they want signature
 signConfirm = raw_input("Y to confirm signature, N to omit ")
+#If Y for signature asks for signature else leaves signature empty
 if(signConfirm == "y") or (signConfirm == "Y"):
 	signature = raw_input("Please add signature ")
 else:
