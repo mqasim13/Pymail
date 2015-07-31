@@ -8,6 +8,7 @@ import getpass
 #provider = raw_input("Please put in email provider(i.e gmail, hotmail, Yahoo!): ")
 #Ask user for his email and password
 sender = raw_input("Please enter your gmail email address: ")
+#TODO use validate_email to verify email address
 password = getpass.getpass("Please enter your email password: ")
 #Ask user where to send email 
 recepient = raw_input("Please put in the targets email: ")
@@ -25,7 +26,7 @@ else:
 
 #create a proper header + subject for the email + signature
 header = "To: " + recepient + "\n" + "From: " + sender + "\n" + "Subject: " + subject + "\n"
-footer = "\n" + signature
+footer = "\n" + signature + "\n" + "Sent from Pymail"
 message = header + message + "\n" + footer
 
 try:
